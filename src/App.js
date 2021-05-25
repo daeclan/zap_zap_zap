@@ -21,7 +21,7 @@ function Loading() {
 
 function ArWing() {
   const group = useRef();
-  const { nodes } = useLoader(GLTFLoader, "models/arwing.glb");
+  const { nodes } = useLoader(GLTFLoader, "arwing.glb");
   useFrame(() => {
     group.current.rotation.y += 0.004;
   });
@@ -42,20 +42,12 @@ function ArWing() {
 export default function App() {
   return (
     <>
-      <Canvas style={{ background: "#171717" }}>
+      <Canvas style={{ background: "#ffffff" }}>
         <directionalLight intensity={0.5} />
         <Suspense fallback={<Loading />}>
           <ArWing />
         </Suspense>
       </Canvas>
-      <a
-        href="https://codeworkshop.dev/blog/2020-03-31-creating-a-3d-spacefox-scene-with-react-three-fiber/"
-        className="blog-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Blog Post
-      </a>
     </>
   );
 }
