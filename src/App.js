@@ -43,7 +43,7 @@ export default function App() {
   return (
     <>
       <Canvas style={{ background: "#ffffff" }}>
-        <directionalLight intensity={0.5} />
+        <directionalLight intensity={0.1} />
         <Suspense fallback={<Loading />}>
           <ArWing />
         </Suspense>
