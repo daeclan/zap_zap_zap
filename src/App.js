@@ -9,35 +9,17 @@ function Loading() {
       <sphereGeometry attach="geometry" args={[1, 16, 16]} />
       <meshStandardMaterial
         attach="material"
-        color="white"
+        color="red"
         transparent
-        opacity={0.6}
-        roughness={1}
-        metalness={0}
+        opacity={1.6}
+        roughness={1.4}
+        metalness={1}
       />
     </mesh>
   );
 }
 
-function ArWing() {
-  const group = useRef();
-  const { nodes } = useLoader(GLTFLoader, "arwing.glb");
-  useFrame(() => {
-    group.current.rotation.y += 0.004;
-  });
-  return (
-    <group ref={group}>
-      <mesh visible geometry={nodes.Default.geometry}>
-        <meshStandardMaterial
-          attach="material"
-          color="white"
-          roughness={0.3}
-          metalness={0.3}
-        />
-      </mesh>
-    </group>
-  );
-}
+
 
 export default function App() {
   return (
@@ -45,7 +27,7 @@ export default function App() {
       <Canvas style={{ background: "#ffffff" }}>
         <directionalLight intensity={0.1} />
         <Suspense fallback={<Loading />}>
-          <ArWing />
+          <Loading />
         </Suspense>
       </Canvas>
     </>
