@@ -27,6 +27,7 @@ export default function App() {
       <Canvas style={{ background: "#ffffff" }}>
         <directionalLight intensity={0.8} />
         <directionalLight intensity={0.8} />
+        <directionalLight intensity={0.8} />
         <Suspense fallback={<Loading />}>
           <Loading />
         </Suspense>
