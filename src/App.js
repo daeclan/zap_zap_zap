@@ -19,6 +19,15 @@ function Loading() {
   );
 }
 
+function Box() {
+  return (
+    <mesh>
+      <boxBufferGeometry attach="geometry" />
+      <meshLambertMaterial attach="material" color="red" />
+    </mesh>
+  )
+}
+
 
 
 export default function App() {
@@ -29,6 +38,7 @@ export default function App() {
         <directionalLight intensity={0.8} />
         <Suspense fallback={<Loading />}>
           <Loading />
+          <Box />
         </Suspense>
       </Canvas>
     </>
