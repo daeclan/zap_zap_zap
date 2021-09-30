@@ -7,7 +7,7 @@ function Loading() {
   return (
     <mesh visible position={[0, 0, 0]} rotation={[0, 0, 0]}>
       <sphereGeometry attach="geometry" args={[1, 16, 16]} />
-      <meshStandardMaterial
+      <meshPhongMaterial
         attach="material"
         color="salmon"
         transparent
@@ -38,6 +38,7 @@ export default function App() {
         <directionalLight intensity={0.8} position={[0, -10, 0]} />
         <directionalLight intensity={0.6} position={[0, 10, 20]} />
         <spotLight position={[0, 20, 0]} angle={0.3} />
+        <spotLight position={[0, -20, 0]} angle={-0.3} />
         <Suspense fallback={<Loading />}>
           <Loading />
           <Box />
