@@ -35,7 +35,9 @@ export default function App() {
     <>
       <Canvas style={{ background: "#998492" }}>
         <directionalLight intensity={0.8} />
-        <directionalLight intensity={0.8} />
+        <directionalLight intensity={0.8} position={[0, -10, 0]} />
+        <directionalLight intensity={0.6} position={[0, 10, 20]} />
+        <spotLight position={[0, 20, 0]} angle={0.3} />
         <Suspense fallback={<Loading />}>
           <Loading />
           <Box />
