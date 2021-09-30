@@ -9,7 +9,7 @@ function Loading() {
       <sphereGeometry attach="geometry" args={[1, 16, 16]} />
       <meshStandardMaterial
         attach="material"
-        color="red"
+        color="salmon"
         transparent
         opacity={1.6}
         roughness={1.4}
@@ -33,7 +33,7 @@ function Box() {
 export default function App() {
   return (
     <>
-      <Canvas style={{ background: "#ffffff" }}>
+      <Canvas style={{ background: "#998492" }}>
         <directionalLight intensity={0.8} />
         <directionalLight intensity={0.8} />
         <Suspense fallback={<Loading />}>
